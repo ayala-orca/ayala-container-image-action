@@ -6,47 +6,8 @@
       "tool": {
         "driver": {
           "name": "Orca Shift-Left Security",
-          "version": "OrcaScanCli/testing",
+          "version": "OrcaScanCli/1.11.1",
           "rules": [
-            {
-              "id": "CVE-2021-3711-debian",
-              "name": "debian (CVE-2021-3711)",
-              "shortDescription": {
-                "text": "debian (CVE-2021-3711)"
-              },
-              "fullDescription": {
-                "text": "debian vulnerability (CVE-2021-3711) at redis:latest (debian 11.2) installed version 1.1.1d-0+deb10u6"
-              },
-              "defaultConfiguration": {
-                "level": "error"
-              }
-            },
-            {
-              "id": "CVE-2018-12886-debian",
-              "name": "debian (CVE-2018-12886)",
-              "shortDescription": {
-                "text": "debian (CVE-2018-12886)"
-              },
-              "fullDescription": {
-                "text": "debian vulnerability (CVE-2018-12886) at redis:latest (debian 11.2) installed version 8.3.0-6"
-              },
-              "defaultConfiguration": {
-                "level": "warning"
-              }
-            },
-            {
-              "id": "aws_access_key_id-Aws Access Key Id",
-              "name": "aws_access_key_id (Aws Access Key Id)",
-              "shortDescription": {
-                "text": "Aws Access Key Id"
-              },
-              "fullDescription": {
-                "text": "Aws Access Key Id secret was found"
-              },
-              "defaultConfiguration": {
-                "level": "error"
-              }
-            },
             {
               "id": "pem_file-PEM File",
               "name": "pem_file (PEM File)",
@@ -61,65 +22,65 @@
               }
             },
             {
-              "id": "1.0.0-Container should be created with a non-root user",
-              "name": "Container should be created with a non-root user (1.0.0)",
+              "id": "private_key-Private Key",
+              "name": "private_key (Private Key)",
               "shortDescription": {
-                "text": "Container should be created with a non-root user"
+                "text": "Private Key"
               },
               "fullDescription": {
-                "text": "Container should be created with a non-root user was found"
+                "text": "Private Key secret was found"
               },
               "defaultConfiguration": {
                 "level": "error"
               }
             },
             {
-              "id": "1.0.5-Use COPY instead of ADD",
-              "name": "Use COPY instead of ADD (1.0.5)",
+              "id": "1a0d7003-b9e8-482a-abda-18dfc7ebd206-Container image should be created with a non-root user",
+              "name": "Container image should be created with a non-root user (1a0d7003-b9e8-482a-abda-18dfc7ebd206)",
               "shortDescription": {
-                "text": "Use COPY instead of ADD"
+                "text": "Container image should be created with a non-root user"
               },
               "fullDescription": {
-                "text": "Use COPY instead of ADD was found"
-              },
-              "defaultConfiguration": {
-                "level": "error"
-              }
-            },
-            {
-              "id": "1.0.10-Dockerfile - Do not use standalone update instructions",
-              "name": "Dockerfile - Do not use standalone update instructions (1.0.10)",
-              "shortDescription": {
-                "text": "Dockerfile - Do not use standalone update instructions"
-              },
-              "fullDescription": {
-                "text": "Dockerfile - Do not use standalone update instructions was found"
+                "text": "Container image should be created with a non-root user was found"
               },
               "defaultConfiguration": {
                 "level": "warning"
               }
             },
             {
-              "id": "1.0.8-Clear apt-get caches",
-              "name": "Clear apt-get caches (1.0.8)",
+              "id": "4dda4ce0-ebbc-4f4c-8285-7f55287c229e-Ensure Content trust for Docker is Enabled",
+              "name": "Ensure Content trust for Docker is Enabled (4dda4ce0-ebbc-4f4c-8285-7f55287c229e)",
               "shortDescription": {
-                "text": "Clear apt-get caches"
+                "text": "Ensure Content trust for Docker is Enabled"
               },
               "fullDescription": {
-                "text": "Clear apt-get caches was found"
+                "text": "Ensure Content trust for Docker is Enabled was found"
               },
               "defaultConfiguration": {
                 "level": "warning"
               }
             },
             {
-              "id": "1.0.7-Use apk add with --no-cache",
-              "name": "Use apk add with --no-cache (1.0.7)",
+              "id": "dd6e59e1-9665-4a21-893e-57da793cbe8f-Ensure that HEALTHCHECK instruction is defined",
+              "name": "Ensure that HEALTHCHECK instruction is defined (dd6e59e1-9665-4a21-893e-57da793cbe8f)",
               "shortDescription": {
-                "text": "Use apk add with --no-cache"
+                "text": "Ensure that HEALTHCHECK instruction is defined"
               },
               "fullDescription": {
-                "text": "Use apk add with --no-cache was found"
+                "text": "Ensure that HEALTHCHECK instruction is defined was found"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            },
+            {
+              "id": "2e85a3aa-ee0c-4b07-a9ea-f3666e7fb8a4-Refrain from using latest tag",
+              "name": "Refrain from using latest tag (2e85a3aa-ee0c-4b07-a9ea-f3666e7fb8a4)",
+              "shortDescription": {
+                "text": "Refrain from using latest tag"
+              },
+              "fullDescription": {
+                "text": "Refrain from using latest tag was found"
               },
               "defaultConfiguration": {
                 "level": "warning"
@@ -130,117 +91,37 @@
       },
       "results": [
         {
-          "ruleId": "CVE-2021-3711-debian",
+          "ruleId": "pem_file-PEM File",
           "ruleIndex": 0,
           "kind": "fail",
           "message": {
-            "text": "libsqlite3-0 (CVE-2021-3711)\nSeverity: CRITICAL\nInstalled version: 1.1.1d-0+deb10u6\nFixed version:1.1.1d-0+deb10u7"
+            "text": "Recommendation: Secret was detected on rule: PEM File on /pem.pem"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "redis:latest (debian 11.2)"
+                  "uri": "/pem.pem"
                 },
                 "region": {
-                  "startLine": 1
+                  "startLine": 0
                 }
               }
             }
           ]
         },
         {
-          "ruleId": "CVE-2021-3711-debian",
-          "ruleIndex": 0,
-          "kind": "fail",
-          "message": {
-            "text": "libssl1.1 (CVE-2021-3711)\nSeverity: CRITICAL\nInstalled version: 1.1.1d-0+deb10u6\nFixed version:1.1.1d-0+deb10u7"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "redis:latest (debian 11.2)"
-                },
-                "region": {
-                  "startLine": 1
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CVE-2018-12886-debian",
+          "ruleId": "private_key-Private Key",
           "ruleIndex": 1,
           "kind": "fail",
           "message": {
-            "text": "gcc-8-base (CVE-2018-12886)\nSeverity: HIGH\nCVSS2 Score: 5\nCVSS3 Score: 5.5\nInstalled version: 8.3.0-6\nFixed version:"
+            "text": "Recommendation: Secret was detected on rule: Private Key on /pem.pem"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "redis:latest (debian 11.2)"
-                },
-                "region": {
-                  "startLine": 1
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "aws_access_key_id-Aws Access Key Id",
-          "ruleIndex": 2,
-          "kind": "fail",
-          "message": {
-            "text": "Aws Access Key Id secret was found"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "/config"
-                },
-                "region": {
-                  "startLine": 1
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "aws_access_key_id-Aws Access Key Id",
-          "ruleIndex": 2,
-          "kind": "fail",
-          "message": {
-            "text": "Aws Access Key Id secret was found"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "/testKey"
-                },
-                "region": {
-                  "startLine": 1
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "aws_access_key_id-Aws Access Key Id",
-          "ruleIndex": 2,
-          "kind": "fail",
-          "message": {
-            "text": "Aws Access Key Id secret was found"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "/.aws/credentials"
+                  "uri": "/pem.pem"
                 },
                 "region": {
                   "startLine": 2
@@ -250,89 +131,51 @@
           ]
         },
         {
-          "ruleId": "aws_access_key_id-Aws Access Key Id",
+          "ruleId": "1a0d7003-b9e8-482a-abda-18dfc7ebd206-Container image should be created with a non-root user",
           "ruleIndex": 2,
           "kind": "fail",
           "message": {
-            "text": "Aws Access Key Id secret was found"
+            "text": "Recommendation: Check on Orca documents for Container image should be created with a non-root user"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "/.aws/credentials"
+                  "uri": "Dockerfile"
                 },
                 "region": {
-                  "startLine": 5
+                  "startLine": 1
                 }
               }
             }
           ]
         },
         {
-          "ruleId": "aws_access_key_id-Aws Access Key Id",
-          "ruleIndex": 2,
-          "kind": "fail",
-          "message": {
-            "text": "Aws Access Key Id secret was found"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "/.aws/credentials"
-                },
-                "region": {
-                  "startLine": 8
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "aws_access_key_id-Aws Access Key Id",
-          "ruleIndex": 2,
-          "kind": "fail",
-          "message": {
-            "text": "Aws Access Key Id secret was found"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "/.aws/credentials"
-                },
-                "region": {
-                  "startLine": 8
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "pem_file-PEM File",
+          "ruleId": "4dda4ce0-ebbc-4f4c-8285-7f55287c229e-Ensure Content trust for Docker is Enabled",
           "ruleIndex": 3,
           "kind": "fail",
           "message": {
-            "text": "PEM File secret was found"
+            "text": "Recommendation: Check on Orca documents for Ensure Content trust for Docker is Enabled"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "pem.pem"
+                  "uri": "Dockerfile"
                 },
-                "region": {}
+                "region": {
+                  "startLine": 1
+                }
               }
             }
           ]
         },
         {
-          "ruleId": "1.0.0-Container should be created with a non-root user",
+          "ruleId": "dd6e59e1-9665-4a21-893e-57da793cbe8f-Ensure that HEALTHCHECK instruction is defined",
           "ruleIndex": 4,
           "kind": "fail",
           "message": {
-            "text": "Recommendation: Check on Orca documents for Container should be created with a non-root user"
+            "text": "Recommendation: Check on Orca documents for Ensure that HEALTHCHECK instruction is defined"
           },
           "locations": [
             {
@@ -348,71 +191,11 @@
           ]
         },
         {
-          "ruleId": "1.0.5-Use COPY instead of ADD",
+          "ruleId": "2e85a3aa-ee0c-4b07-a9ea-f3666e7fb8a4-Refrain from using latest tag",
           "ruleIndex": 5,
           "kind": "fail",
           "message": {
-            "text": "Recommendation: Check on Orca documents for Use COPY instead of ADD"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Dockerfile"
-                },
-                "region": {
-                  "startLine": 1
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "1.0.10-Dockerfile - Do not use standalone update instructions",
-          "ruleIndex": 6,
-          "kind": "fail",
-          "message": {
-            "text": "Recommendation: Check on Orca documents for Dockerfile - Do not use standalone update instructions"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Dockerfile"
-                },
-                "region": {
-                  "startLine": 1
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "1.0.8-Clear apt-get caches",
-          "ruleIndex": 7,
-          "kind": "fail",
-          "message": {
-            "text": "Recommendation: Check on Orca documents for Clear apt-get caches"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Dockerfile"
-                },
-                "region": {
-                  "startLine": 1
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "1.0.7-Use apk add with --no-cache",
-          "ruleIndex": 8,
-          "kind": "fail",
-          "message": {
-            "text": "Recommendation: Check on Orca documents for Use apk add with --no-cache"
+            "text": "Recommendation: Check on Orca documents for Refrain from using latest tag"
           },
           "locations": [
             {
