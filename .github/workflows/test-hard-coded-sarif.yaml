@@ -1,6 +1,6 @@
 
 
-name: Test sarif
+name: Test hard coded sarif
 
 on:
   workflow_dispatch:
