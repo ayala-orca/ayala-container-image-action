@@ -103,9 +103,7 @@
                 "artifactLocation": {
                   "uri": "/pem.pem"
                 },
-                "region": {
-                  "startLine": 0
-                }
+                "region": {}
               }
             }
           ]
