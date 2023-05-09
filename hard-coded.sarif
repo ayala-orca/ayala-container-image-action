@@ -6,34 +6,8 @@
       "tool": {
         "driver": {
           "name": "Orca Shift-Left Security",
-          "version": "OrcaScanCli/1.11.1",
+          "version": "OrcaScanCli/testing",
           "rules": [
-            {
-              "id": "pem_file-PEM File",
-              "name": "pem_file (PEM File)",
-              "shortDescription": {
-                "text": "PEM File"
-              },
-              "fullDescription": {
-                "text": "PEM File secret was found"
-              },
-              "defaultConfiguration": {
-                "level": "error"
-              }
-            },
-            {
-              "id": "private_key-Private Key",
-              "name": "private_key (Private Key)",
-              "shortDescription": {
-                "text": "Private Key"
-              },
-              "fullDescription": {
-                "text": "Private Key secret was found"
-              },
-              "defaultConfiguration": {
-                "level": "error"
-              }
-            },
             {
               "id": "1a0d7003-b9e8-482a-abda-18dfc7ebd206-Container image should be created with a non-root user",
               "name": "Container image should be created with a non-root user (1a0d7003-b9e8-482a-abda-18dfc7ebd206)",
@@ -45,6 +19,9 @@
               },
               "defaultConfiguration": {
                 "level": "warning"
+              },
+              "properties": {
+                "security-severity": 4
               }
             },
             {
@@ -58,6 +35,9 @@
               },
               "defaultConfiguration": {
                 "level": "warning"
+              },
+              "properties": {
+                "security-severity": 4
               }
             },
             {
@@ -71,19 +51,25 @@
               },
               "defaultConfiguration": {
                 "level": "warning"
+              },
+              "properties": {
+                "security-severity": 0.1
               }
             },
             {
-              "id": "2e85a3aa-ee0c-4b07-a9ea-f3666e7fb8a4-Refrain from using latest tag",
-              "name": "Refrain from using latest tag (2e85a3aa-ee0c-4b07-a9ea-f3666e7fb8a4)",
+              "id": "cff5a861-eddf-4b59-bc25-9c415900dc76-Unsupported Host OS",
+              "name": "Unsupported Host OS (cff5a861-eddf-4b59-bc25-9c415900dc76)",
               "shortDescription": {
-                "text": "Refrain from using latest tag"
+                "text": "Unsupported Host OS"
               },
               "fullDescription": {
-                "text": "Refrain from using latest tag was found"
+                "text": "Unsupported Host OS was found"
               },
               "defaultConfiguration": {
-                "level": "warning"
+                "level": "error"
+              },
+              "properties": {
+                "security-severity": 8.9
               }
             }
           ]
@@ -91,46 +77,8 @@
       },
       "results": [
         {
-          "ruleId": "pem_file-PEM File",
-          "ruleIndex": 0,
-          "kind": "fail",
-          "message": {
-            "text": "Recommendation: Secret was detected on rule: PEM File on /pem.pem"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "/pem.pem"
-                },
-                "region": {}
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "private_key-Private Key",
-          "ruleIndex": 1,
-          "kind": "fail",
-          "message": {
-            "text": "Recommendation: Secret was detected on rule: Private Key on /pem.pem"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "/pem.pem"
-                },
-                "region": {
-                  "startLine": 2
-                }
-              }
-            }
-          ]
-        },
-        {
           "ruleId": "1a0d7003-b9e8-482a-abda-18dfc7ebd206-Container image should be created with a non-root user",
-          "ruleIndex": 2,
+          "ruleIndex": 0,
           "kind": "fail",
           "message": {
             "text": "Recommendation: Check on Orca documents for Container image should be created with a non-root user"
@@ -150,7 +98,7 @@
         },
         {
           "ruleId": "4dda4ce0-ebbc-4f4c-8285-7f55287c229e-Ensure Content trust for Docker is Enabled",
-          "ruleIndex": 3,
+          "ruleIndex": 1,
           "kind": "fail",
           "message": {
             "text": "Recommendation: Check on Orca documents for Ensure Content trust for Docker is Enabled"
@@ -170,7 +118,7 @@
         },
         {
           "ruleId": "dd6e59e1-9665-4a21-893e-57da793cbe8f-Ensure that HEALTHCHECK instruction is defined",
-          "ruleIndex": 4,
+          "ruleIndex": 2,
           "kind": "fail",
           "message": {
             "text": "Recommendation: Check on Orca documents for Ensure that HEALTHCHECK instruction is defined"
@@ -189,11 +137,11 @@
           ]
         },
         {
-          "ruleId": "2e85a3aa-ee0c-4b07-a9ea-f3666e7fb8a4-Refrain from using latest tag",
-          "ruleIndex": 5,
+          "ruleId": "cff5a861-eddf-4b59-bc25-9c415900dc76-Unsupported Host OS",
+          "ruleIndex": 3,
           "kind": "fail",
           "message": {
-            "text": "Recommendation: Check on Orca documents for Refrain from using latest tag"
+            "text": "Recommendation: Check on Orca documents for Unsupported Host OS"
           },
           "locations": [
             {
