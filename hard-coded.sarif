@@ -21,7 +21,7 @@
                 "level": "warning"
               },
               "properties": {
-                "security-severity": 4
+                "security-severity": "4"
               }
             },
             {
@@ -37,7 +37,7 @@
                 "level": "warning"
               },
               "properties": {
-                "security-severity": 4
+                "security-severity": "4"
               }
             },
             {
@@ -53,7 +53,7 @@
                 "level": "warning"
               },
               "properties": {
-                "security-severity": 0.1
+                "security-severity": "0.1"
               }
             },
             {
@@ -69,7 +69,7 @@
                 "level": "error"
               },
               "properties": {
-                "security-severity": 8.9
+                "security-severity": "8.9"
               }
             }
           ]
